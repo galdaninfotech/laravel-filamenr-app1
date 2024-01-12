@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('numbers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('number');
+            $table->integer('number')->unique();
             $table->char('tagline', 80);
 
             $table->timestamps();
